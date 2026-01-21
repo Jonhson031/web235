@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Maksym Yaremko
+WEB 235
+Module 2 Lab 1
+20 January 2026
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Creating and Using Arrays</title>
+  <link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+    </header>
+    <div class="content">
+      <div class="main">
+        <h1>Creating and Using Arrays</h1>
+        <ul></ul>
+      </div>
+    </div>
+    <footer>
+      <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>.
+        Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+    </footer>
+  </div>
+  <script>
+    var favoriteFoods = [
+      "Pizza",
+      "Sushi",
+      "Burgers",
+      "Pasta"
+    ];
+    for (var i = 0; i < favoriteFoods.length; i++) {
+      document.querySelector('ul').innerHTML += `<li> ${favoriteFoods[i]}</li>`;
+    }
+  </script>
+</body>
+
+</html>

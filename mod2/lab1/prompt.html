@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Maksym Yaremko
+WEB 235
+Module 2 Lab 1
+20 January 2026
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Using a Variable, Part II</title>
+  <link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+  </header>
+  <div class="content">
+    <div class="main">
+      <h1>Using a Variable, Part II</h1>
+      <br><br><br>
+      <p></p>
+    </div>
+  </div>
+  <footer>
+    <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>.
+      Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+  </footer>
+  </div>
+  <script>
+    var userName = prompt("What is your name?");
+    var favoriteColor = prompt("What is your favorite color?");
+    document.querySelector('p').innerText = `Hello ${userName} your favorite color is ${favoriteColor}!`;
+  </script>
+</body>
+
+</html>

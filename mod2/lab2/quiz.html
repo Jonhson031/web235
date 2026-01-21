@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Maksym Yaremko
+WEB 235
+Module 2 Lab 2
+20 January 2026
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Simple Quiz</title>
+  <link href="site.css" rel="stylesheet">
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+    </header>
+    <div class="content">
+      <div class="main">
+        <h1>A Simple Quiz</h1>
+        <script>
+          var score = 0;
+
+          var q1 = prompt("What does HTML stand for?\nA) Hyperlinks Text Markup Language\nB) Hyper Text Markup Language\nC) Home Tool Markup Language");
+
+          if (q1 === "B" || q1 === "b") {
+            score++;
+          }
+
+          var q2 = prompt("Which symbol is used for comments in JavaScript?\nA) //\nB) <!-- -->\nC) **");
+
+          if (q2 === "A" || q2 === "a") {
+            score++;
+          }
+
+          var q3 = prompt("What keyword is used to create a function?\nA) function\nB) method\nC) define");
+
+          if (q3 === "A" || q3 === "a") {
+            score++;
+          }
+
+          document.write("You scored " + score + " out of 3.");
+        </script>
+
+      </div>
+    </div>
+    <footer>
+      <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>.
+        Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+    </footer>
+  </div>
+</body>
+
+</html>

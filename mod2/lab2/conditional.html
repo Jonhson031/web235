@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Maksym Yaremko
+WEB 235
+Module 2 Lab 2
+20 January 2026
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Using Conditional Statements</title>
+  <link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+    </header>
+    <div class="content">
+      <div class="main">
+        <h1>Using Conditional Statements</h1>
+        <script>
+          var age = prompt("Enter your age:");
+          age = parseInt(age);
+          if (age >= 18) {
+            document.write("You are old enough to vote.<br>");
+          } else {
+            document.write("You are not old enough to vote yet.<br>");
+          }
+        </script>
+      </div>
+    </div>
+    <footer>
+      <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>.
+        Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
