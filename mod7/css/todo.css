@@ -1,0 +1,120 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --subtext: #94a3b8;
+  --border: #334155;
+
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+
+  --success: #22c55e;
+  --danger: #ef4444;
+}
+
+
+body {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+
+input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+}
+
+
+#todo-list li,
+#completed-list li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 8px;
+  transition: 0.2s;
+}
+
+#todo-list li:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+
+.due-date {
+  font-size: 0.8rem;
+  color: var(--subtext);
+}
+
+
+.done,
+.delete {
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.2s;
+}
+
+
+.done {
+  background: var(--primary);
+  color: white;
+}
+
+.done:hover {
+  background: var(--primary-hover);
+}
+
+
+.delete {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--subtext);
+}
+
+.delete:hover {
+  background: var(--danger);
+  color: white;
+  border-color: var(--danger);
+}
+
+
+#completed-list .done {
+  background: transparent;
+  color: var(--success);
+  cursor: default;
+}
+
+
+.ui-state-highlight {
+  height: 40px;
+  border: 2px dashed var(--border);
+  border-radius: 6px;
+}
