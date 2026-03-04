@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB 235 - Module 8 - Vue intro</title>
+</head>
+
+<body>
+    <h1>WEB 235 - Module 8 - Vue intro</h1>
+    <div id="app">
+        <h2>{{ message }}</h2>
+        <p>{{switchmessage}}</p>
+        <button @click="reverseMessage">Reverse Message</button>
+
+        <ol>
+            <li v-for="(todo, index) in todos" :key="index">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    message: 'This is the first App.',
+                    switchmessage: 'Reverse this message by the word',
+                    todos: [
+                        { text: 'Learn JavaScript' },
+                        { text: 'Learn Vue' },
+                        { text: 'Experiment' }
+                    ]
+                }
+            },
+            methods: {
+                reverseMessage() {
+                    this.switchmessage = this.switchmessage
+                        .split(' ')
+                        .reverse()
+                        .join(' ')
+                }
+            },
+            mounted() {
+                this.todos.push({
+                    text: 'Tedd wants a new item at the end of the list'
+                })
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
